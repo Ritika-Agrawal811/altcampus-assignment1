@@ -1,0 +1,125 @@
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+nav {
+  background-color: #07154c;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin: 0 1em;
+  font-size: 1.25rem;
+}
+
+nav a.active-link {
+  color: #15ba3a;
+}
+
+.container {
+  width: 90%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: min(8vw, 42px);
+  text-align: center;
+  font-family: Georgia, serif;
+  margin: 1em 0;
+}
+
+h2 {
+  font-size: min(5vw, 25px);
+  text-align: center;
+  font-weight: 700;
+}
+
+header .box {
+  font-size: 10px;
+  position: relative;
+  width: 20em;
+  height: 20em;
+  background-color: #99d8ca;
+  margin: 5em auto;
+  border: 0.8em solid #000;
+  border-radius: 1.5em;
+  outline: 1.5em solid #5873e2;
+  outline-offset: -2.3em;
+}
+
+header .box::before {
+  content: "";
+  position: absolute;
+  font-size: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 24em;
+  height: 24em;
+  background-color: #90ffa9;
+  border-radius: 2em;
+  z-index: -1;
+}
+
+@media (max-width: 576px) {
+  header .box {
+    font-size: 8px;
+  }
+
+  header .box::before {
+    content: "";
+    position: absolute;
+    font-size: 8px;
+  }
+}
+
+.labels {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin: 1em 0 2em 0;
+}
+
+.labels p {
+  position: relative;
+  margin: 0 1.5em;
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+.labels p::before {
+  content: "";
+  position: absolute;
+  width: 1.25em;
+  height: 1.25em;
+  border: 1px solid #000;
+  border-radius: 50%;
+  left: -1.75em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 576px) {
+  .labels {
+    flex-wrap: wrap;
+  }
+
+  .labels p {
+    margin: 1.5em;
+    font-size: 1rem;
+  }
+}
