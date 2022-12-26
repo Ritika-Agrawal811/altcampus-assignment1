@@ -178,3 +178,106 @@ header .box::before {
     width: min(90%, 250px);
   }
 }
+
+/* Blog page */
+
+.blog-header,
+.blog-container {
+  margin: 2em auto;
+  display: flex;
+  gap: 1.5em;
+}
+
+.blog-header {
+  margin-top: 3em;
+}
+
+.blog-header figure {
+  position: relative;
+  width: 50%;
+  height: 300px;
+}
+
+.blog-header figure img,
+.blog-container article figure img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-header aside,
+.blog-container article {
+  width: 50%;
+}
+
+.blog-container article figure {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+.blog-header aside h2,
+.blog-container article h2 {
+  text-align: left;
+  color: #07154c;
+}
+
+.blog-container article h2 {
+  margin-top: 1em;
+}
+
+p {
+  font-size: 1.15rem;
+  line-height: 1.2;
+  margin: 1em 0;
+}
+
+.read-more-btn {
+  background-color: #19bb3d;
+  color: #fff;
+  font-size: 1.15rem;
+  padding: 0.5em 1.15em;
+  font-weight: 500;
+  border: 0;
+  border-radius: 2em;
+}
+
+.blog-container a {
+  color: #19bb3d;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+@media (max-width: 576px) {
+  .blog-header,
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .blog-header figure,
+  .blog-container article figure {
+    width: 100%;
+    height: 200px;
+  }
+
+  .blog-header aside,
+  .blog-container article {
+    width: 100%;
+  }
+
+  .blog-header aside h2,
+  .blog-container article h2 {
+    font-size: min(6vw, 25px);
+  }
+
+  .blog-header aside p {
+    font-size: 1rem;
+  }
+
+  .read-more-btn {
+    font-size: 1.05rem;
+    width: 100%;
+  }
+}
